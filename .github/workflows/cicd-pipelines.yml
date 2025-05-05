@@ -26,4 +26,4 @@ jobs:
             echo "Berhasil pindah ke folder mda"
 
             docker-compose up -d #Menjalankan docker compose di server
-            echo "Berhasil menjalankan docker compose di server
+            echo "Berhasil menjalankan docker compose di server"
