@@ -21,3 +21,9 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             echo "Berhasil konek ke serverss"
+
+            cd /home/mda
+            echo "Berhasil pindah ke folder mda"
+
+            docker-compose up -d #Menjalankan docker compose di server
+            echo "Berhasil menjalankan docker compose di server
