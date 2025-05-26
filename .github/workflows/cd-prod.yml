@@ -30,3 +30,13 @@ jobs:
                 mkdir /home/mda
                 cd /home/mda
               fi
+
+              if [ -d ".git"]; then
+                echo "Ada folder .git, melakukan git pull"
+                git remote set-url origin https://${ secrets.GIT_USERNAME }}:${{ secrets.GIT_PAT }}@github.com/dhimskyyy/cicd_database_example.git
+                git pull origin main
+              else
+                echo "Gak ada folder .git, melakukan git clone"
+                git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PAT }}@github.com/dhimskyyy/cicd_database_example.git
+                cd cicd_database_example
+              fi
